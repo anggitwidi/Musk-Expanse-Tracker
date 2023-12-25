@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/musk.png" type="image/png">
+    <title>Expense Tracker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="home-page">
+    <!-- Sidebar -->
+    <nav class="sidebar close">
+        <header id="header1">
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets/musk.png" alt="Musk">
+                </span>
+                <div class="text header-text">
+                    <span class="name">Musk</span>
+                </div>
+            </div>
+            <i class='bx bxs-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/mywallet.html">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">My Wallet</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/addtransaction.html">
+                            <i class='bx bx-add-to-queue icon'></i>
+                            <span class="text nav-text">Add Transaction</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/history.html">
+                            <i class='bx bx-history icon'></i>
+                            <span class="text nav-text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Login/Login.html">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-sun icon sun'></i>
+                            <i class='bx bx-moon icon moon'></i>
+                        </div>
+                        <span class="mode-text text">Light Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Expense Tracker Balance Section -->
+    <main>
+        <h1>Expense Tracker</h1>
+        <header id="header2">
+            <div>
+                <h5>Total Balance</h5>
+                <span id="balance">Rp 0.00</span>
+            </div>
+            <div>
+                <h5>Income</h5>
+                <span id="income">Rp 0.00</span>
+            </div>
+            <div>
+                <h5>Expense</h5>
+                <span id="expense">Rp 0.00</span>
+            </div>
+        </header>
+
+        <!-- Expense Tracker History Section -->
+        <section>
+            <h3>Transaksi</h3>
+            <ul class="listtransaksi" id="listtransaksi"></ul>
+            <div id="status"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/musk.png" type="image/png">
+    <title>Expense Tracker</title>
+
+    <!-- Your existing CSS (replace with your actual path) -->
+    <link rel="stylesheet" href="history.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="history-page">
+    <h1 class="judul">History</h1>
+    <nav class="sidebar close">
+        <header id="header1">
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets/musk.png" alt="Musk">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Musk</span>
+                </div>
+            </div>
+
+            <i class='bx bxs-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/mywallet.html">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">My Wallet</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/addtransaction.html">
+                            <i class='bx bx-add-to-queue icon'></i>
+                            <span class="text nav-text">Add Transaction</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/history.html">
+                            <i class='bx bx-history icon'></i>
+                            <span class="text nav-text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Login/Login.html">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-sun icon sun'></i>
+                            <i class='bx bx-moon icon moon'></i>
+                        </div>
+                        <span class="mode-text text">Light Mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="history-container">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="filterMonthDropdownBtn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Month
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filterMonthDropdownBtn">
+                <li class="dropdown-item" id="allMonths" value="0" onclick="filterTransactionsByMonth(this)">All Months</li>
+                <li class="dropdown-item" value="1" onclick="filterTransactionsByMonth(this)">Januari</li>
+                <li class="dropdown-item" value="2" onclick="filterTransactionsByMonth(this)">Februari</li>
+                <li class="dropdown-item" value="3" onclick="filterTransactionsByMonth(this)">Maret</li>
+                <li class="dropdown-item" value="4" onclick="filterTransactionsByMonth(this)">April</li>
+                <li class="dropdown-item" value="5" onclick="filterTransactionsByMonth(this)">Mei</li>
+                <li class="dropdown-item" value="6" onclick="filterTransactionsByMonth(this)">Juni</li>
+                <li class="dropdown-item" value="7" onclick="filterTransactionsByMonth(this)">Juli</li>
+                <li class="dropdown-item" value="8" onclick="filterTransactionsByMonth(this)">Agustus</li>
+                <li class="dropdown-item" value="9" onclick="filterTransactionsByMonth(this)">September</li>
+                <li class="dropdown-item" value="10" onclick="filterTransactionsByMonth(this)">Oktober</li>
+                <li class="dropdown-item" value="11" onclick="filterTransactionsByMonth(this)">November</li>
+                <li class="dropdown-item" value="12" onclick="filterTransactionsByMonth(this)">Desember</li>
+            </ul>
+        </div>
+        <ul class="history-list" id="listtransaksi-history"></ul>
+        <div id="status"></div>
+        </main>
+    <script src="script.js"></script>
+</body>
+</html>

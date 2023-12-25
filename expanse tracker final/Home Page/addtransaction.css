@@ -1,0 +1,92 @@
+.option {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 200px;
+    height: 45px;
+    left: 280px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.option input {
+    appearance: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    background: #fff;
+    outline: none;
+}
+
+.option input::before,
+.option input::after {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bolder;
+}
+
+.option input::before {
+    content: "Expense";
+    left: 20px;
+}
+
+.option input::after {
+    content: "Income";
+    right: 20px;
+}
+
+.option input:checked {
+    background: #EEF0F2;
+}
+
+.option label {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 20px;
+}
+
+.option input {
+    transition: 0.25s;
+}
+
+.option input:checked::after,
+.option input:checked::before {
+    color: #1d1f27;
+    transition: color 0.5s;
+}
+
+.option input:checked+label {
+    left: 10px;
+    right: 100px;
+    background: #fff;
+    transition: left 0.5s, right 0.4s 0.2s;
+}
+
+.option input:not(:checked) {
+    background: #EEF0F2;
+    transition: background 0.4s;
+}
+
+.option input:not(:checked)::before {
+    color: #1d1f27;
+    transition: color 0.5s;
+}
+
+.option input:not(:checked)::after{
+    color: #1d1f27;
+    transition: color 0.5s 0.2s;
+}
+
+.option input:not(:checked) +label {
+    left: 100px;
+    right: 10px;
+    background: #fff;
+    transition: left 0.4s 0.2s , right 0.5s , back;
+}

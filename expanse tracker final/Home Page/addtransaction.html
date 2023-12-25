@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/musk.png" type="png">
+    <title>Expense Tracker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="addtransaction.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <h1 class="judul">Add Transaction</h1>
+
+    <nav class="sidebar close">
+        <header id="header1">
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets/musk.png" alt="Musk">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Musk</span>
+                </div>
+            </div>
+
+            <i class='bx bxs-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/mywallet.html">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">My Wallet</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/addtransaction.html">
+                            <i class='bx bx-add-to-queue icon'></i>
+                            <span class="text nav-text">Add Transaction</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/history.html">
+                            <i class='bx bx-history icon'></i>
+                            <span class="text nav-text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="/expanse tracker/Login/Login.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-sun icon sun'></i>
+                        <i class='bx bx-moon icon moon'></i>
+                    </div>
+                    <span class="mode-text text">Light Mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Input Data -->
+    <div class="wrapform">
+        <span class="option">
+            <input type="checkbox" id="switcher">
+            <label for="switcher"></label>
+        </span>
+
+        <section>
+            <form id="transactionForm">
+                <div class="wrapinput">
+                    <label for="deskripsi">Deskripsi</label>
+                    <input type="text" name="deskripsi" placeholder="Nama" required/>
+                </div>
+                <div class="wrapinput">
+                    <label for="jumlah">Jumlah</label>
+                    <input type="number" name="jumlah" value="0" min="0.01" step="0.01" required/>
+                </div>
+                <div class="wrapinput">
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" name="tanggal" required/>
+                </div>
+                <button type="submit" class="submitform">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

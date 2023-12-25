@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/musk.png" type="png">
+    <title>Expense Tracker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <h1 class="judul">My Wallet</h1>
+
+    <nav class="sidebar close">
+        <header id="header1">
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets/musk.png" alt="Musk">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Musk</span>
+                </div>
+            </div>
+
+            <i class='bx bxs-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/index.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/mywallet.html">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">My Wallet</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/addtransaction.html">
+                            <i class='bx bx-add-to-queue icon'></i>
+                            <span class="text nav-text">Add Transaction</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Home Page/history.html">
+                            <i class='bx bx-history icon'></i>
+                            <span class="text nav-text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bottom-content">
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="/expanse tracker/Login/Login.html">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="menu-links">
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-sun icon sun'></i>
+                            <i class='bx bx-moon icon moon'></i>
+                        </div>
+                        <span class="mode-text text">Light Mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="wrapform">
+        <section>
+            <form id="addWalletForm">
+                <div class="wrapinputwallet">
+                    <img src="assets/bca.webp" class="logobca" alt="BCA">
+                    <div class="input-container">
+                        <span class="mata-uang">Rp</span>
+                        <input type="number" id="bca-value" class="input-mata-uang" placeholder="Jumlah" value=""/>
+                        <button type="button" onclick="saveBcaValue()" class="addwallet">
+                            <span class="wallet-icon"><i class='bx bx-wallet icon'></i></span>
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <div class="wrapinputwallet">
+                    <img src="assets/gopay.png" class="logogopay" alt="GoPay">
+                    <div class="input-container">
+                        <span class="mata-uang">Rp</span>
+                        <input type="number" id="gopay-value" class="input-mata-uang" placeholder="Jumlah" value=""/>
+                        <button type="button" onclick="saveGopayValue()" class="addwallet">
+                            <span class="wallet-icon"><i class='bx bx-wallet icon'></i></span>
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <div class="wrapinputwallet">
+                    <img src="assets/dana.png" class="logodana" alt="Dana">
+                    <div class="input-container">
+                        <span class="mata-uang">Rp</span>
+                        <input type="number" id="dana-value" class="input-mata-uang" placeholder="Jumlah" value=""/>
+                        <button type="button" onclick="saveDanaValue()" class="addwallet">
+                            <span class="wallet-icon"><i class='bx bx-wallet icon'></i></span>
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadBcaValue();
+            loadGopayValue();
+            loadDanaValue();
+        });
+    </script>
+</body>
+
+</html>
